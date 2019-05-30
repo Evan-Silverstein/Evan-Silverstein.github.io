@@ -2,7 +2,7 @@ import React, { Component} from "react";
 
 function Resume(props){
     var resumeLink = props.resumeLink; //+ '#zoom=50';
-    var googleLink = "https://docs.google.com/viewer?url=" + getHomeUrl() + resumeLink + "&embedded=true";
+    //var googleLink = "https://docs.google.com/viewer?url=" + getHomeUrl() + resumeLink + "&embedded=true";
     // console.log(googleLink)
     // var service = props.service;
     // var resumeLink = service.getResumeUrl();
@@ -13,7 +13,7 @@ function Resume(props){
     return(
         <div className="resume-wrapper">
         <object data={resumeLink} type="application/pdf">
-            <iframe src={googleLink}></iframe>
+            {/* <iframe src={googleLink}></iframe> */}
         </object>
             {/* <iframe src={resumeLink} ></iframe> */}
         </div>
