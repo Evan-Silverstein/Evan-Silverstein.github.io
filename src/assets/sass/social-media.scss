@@ -1,0 +1,23 @@
+@import 'variables';
+.social-media-collection{
+    display: flex;
+    justify-content: center;
+    .social-media-item{
+        margin: 5px;
+        //padding: 5px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $grey;
+        svg{
+            font-size: 30px;
+            //color: $white;
+        }
+    }
+}
+// :host{
+//     display: flex;
+//     flex-grow: 1;
+// }

@@ -1,0 +1,80 @@
+@import 'variables';
+@import 'utilities';
+@import 'buttons';
+html, body{
+    padding: 0px;
+    margin: 0px;
+    @extend %default-font-size;
+    //font-size: 14px;
+    // background-color: $white;
+
+}
+
+section{
+    padding: 50px 0px
+}
+
+// a{
+    // text-decoration: none;
+
+// }
+%title-font-size{
+    font-size: 50px;
+}
+
+%subtitle-font-size{
+    font-size: 30px;
+    //text-decoration: underline;
+}
+
+%default-font-size{
+    font-size: 18px;
+}
+
+%title-space{
+    margin-bottom: 35px;
+}
+
+
+
+input, textarea{
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 0.5px solid $black;
+    &::placeholder{
+        color: $black;
+    }
+}
+
+input[type=submit]{
+    width: unset;
+    margin-bottom: 0px;
+    border: none;
+}
+
+textarea{
+    min-height: 100px;
+}
+
+a{
+    color: $blue;
+}
+p{
+    margin: 0px;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+

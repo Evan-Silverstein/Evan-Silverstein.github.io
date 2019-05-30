@@ -1,0 +1,151 @@
+@import 'global';
+.page-home{
+
+    .section-title-primary{
+        @extend %title-font-size;
+        @extend %title-space;
+        // text-align: center;
+    }
+    .title-secondary{
+        @extend %subtitle-font-size;
+    }
+    .section-intro{
+        height: 100vh;
+        padding: 0px;
+        background-color: $white;
+       
+        .overlay-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            &::after{
+                @extend %overlay-effect;
+                content: '';
+                    // overflow: hidden;
+            
+                background: url('/src/uploads/images/hero-image.jpg');        
+                // height: 100vh;
+
+            }
+        }
+        .stamp{
+        
+            color: $white;
+            max-width: 500px;
+            margin: 0px auto;
+            text-align: center;
+            .hero-text{
+                font-size: 30px;
+                margin: 0px;
+            }
+            p{
+                margin-top: 10px;
+                font-size: 25px;
+                font-style: italic;
+                margin-bottom: 20px;
+            }
+            a{
+                margin-top: 20px;
+                text-decoration: none;
+                background-color:$black;
+                /* color: blue; */
+                text-align: center;
+                font-weight: 500;
+                color: $white;
+                padding: 5px 10px;
+
+            }
+        }
+
+    }
+
+    .section-about{
+        background-color: $white;
+        .section-body{
+            max-width: 600px;
+            margin: 0px auto;
+        }
+        .section-content{
+            .container{
+                padding: 0px;
+            }
+        }
+        .left-wrapper, .right-wrapper{
+            padding: $itemSpace;
+        }
+        .left-wrapper{
+            text-align: center;
+            .img-wrapper{
+                background-color: $grey;
+                // margin: 0px auto;
+                img{
+                    //max-width: 400px;
+
+                }
+            }
+        }
+        .right-wrapper{
+            // padding-left: $itemSpace;
+            .self-wrapper{
+                margin-bottom: $itemSpace;
+                   
+            }
+            .skills-wrapper{
+                .item-wrapper{
+                    padding: $itemSpace 0px;
+                }
+                
+            }
+
+      
+        }
+
+        @media screen and (max-width: $md) {
+            img{
+                max-width: 400px;
+
+            }
+            .self-wrapper{
+                //text-align: center;
+            }
+            .img-wrapper{
+
+            }
+            
+        }
+   
+        
+
+    }
+
+    .section-portfolio{
+        .item-wrapper{
+            padding: $itemSpace;
+        }
+    }
+
+    .section-contact{
+        background-color: $white;
+        .form-wrapper{
+            max-width: 400px;
+            margin: 0px auto;
+            // input[type=text], textarea{
+            //     background-color: $black;
+            //     &::placeholder{
+            //         color: $white;
+            //     }
+            // }
+            input[type=submit]{
+                @extend %button-fill;
+                width: 100%;
+                // @extend %my-button;
+                // border: 2px
+            }
+        }
+    }
+
+  
+
+}

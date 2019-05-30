@@ -1,0 +1,30 @@
+@import 'variables';
+.my-card-simple{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    //box-shadow: $boxShadow;
+    // padding: 20px;
+    // margin: 10px;
+    //background-color: $white;
+    .img-wrapper{
+        margin-right: 10px;
+        svg{
+            color: $blue;
+            font-size: 30px;
+        }
+    }
+    .card-content{
+        .title{
+            font-size: 25px;
+        }
+    }
+    .header{
+        //margin-bottom: 20px;
+    }
+    // width: 100%;
+}
+// :host{
+//     display: flex;
+//     flex-grow: 1;
+// }

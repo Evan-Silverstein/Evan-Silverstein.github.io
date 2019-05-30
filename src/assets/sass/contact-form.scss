@@ -1,0 +1,35 @@
+@import 'variables';
+.my-form{
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        input, textarea{
+            flex-grow: 1;
+            width: unset;
+        }
+    }
+
+    .thank-you-msg{
+        display: none;
+    }
+
+
+    // padding: 20px;
+    // background-color: $black;
+    // .content-wrapper{
+    //     background-color: $white;
+    // }
+
+}
+
+.is-submitted{
+    text-align: center;
+    form{
+        display: none;
+
+    }
+    .thank-you-msg{
+        display: block !important;
+
+    }
+}
