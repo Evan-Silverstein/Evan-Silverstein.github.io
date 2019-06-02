@@ -24,9 +24,9 @@ class App extends React.Component {
             <header>
               <Header />
             </header>
-            <main>
+            <div className="main">
                 <RouterOutlet service={service}/>      
-            </main>
+            </div>
             <footer>
                 <Footer service={service}/>
             </footer>

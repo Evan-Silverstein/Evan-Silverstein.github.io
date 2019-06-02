@@ -9,8 +9,13 @@ import MyModal from 'Src/components/shared/MyModal';
 import styles from "Src/assets/sass/home.scss";
 // import DataService from "Src/services/DataService";
 
-function Home(props) {
+class Home extends React.Component {
+    // constructor(props){
+    //     super()
 
+    // }
+    render(){
+        var props = this.props;
         var service = props.service;
         var skills = service.getSkillCards();
         var selfInfo = service.getSelfCard();
@@ -21,20 +26,38 @@ function Home(props) {
         // console.log("query:", displayResume);
         var resumeLink = service.getResumeUrl();
         var emailHandler = () => service.getEmail();
-        return(
-            <div className="page-home">
-                <Intro/>
-                <About skills={skills} self={selfInfo}/>
-                <Portfolio projects={projects}/>
-                <Contact emailHandler={emailHandler}/>
-                <MyModal modalId='resume-modal' title='' fullWindow={true} show={displayResume}>
-                    <Resume resumeLink={resumeLink}/>
-                </MyModal>
+        var modalHeader = this.getModalTitle(resumeLink);
+            // console.log(modalHeader)
 
-            </div>
+            return(
+                <div className="page-home">
+                    <Intro/>
+                    <About skills={skills} self={selfInfo}/>
+                    <Portfolio projects={projects}/>
+                    <Contact emailHandler={emailHandler}/>
+                    <MyModal modalTitle={modalHeader} modalId='resume-modal' title='' fullWindow={true} show={displayResume}>
+                        <Resume resumeLink={resumeLink}/>
+                    </MyModal>
+    
+                </div>
+    
+        )
+    }
+        
+
+    getModalTitle(resumeLink){
+        return(
+                <div className='title-wrapper'>
+                    <a href={resumeLink}  download> Download </a>
+                    <a target="_blank" href={resumeLink}> Open </a>
+
+                </div>
+
         )
 
-
     }
+
+
+}
 
 export default Home;

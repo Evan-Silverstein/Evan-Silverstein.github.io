@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { HashLink as NavLink } from 'react-router-hash-link';
+// import { Link } from 'react-router-dom'
+// import { HashLink as NavLink } from 'react-router-hash-link';
 import React, { Component} from "react";
 import MenuFullScreen from 'Src/components/shared/menu/MenuFullScreen';
 import styles from "Src/assets/sass/header.scss";
@@ -37,7 +37,7 @@ class Header extends React.Component{
           <div className="overlay-content">
             <Container>
               <Row>
-                <Col>
+                <Col xs={12}>
                   <div className="header-content">
             
                       <button className='d-md-none'
@@ -49,7 +49,7 @@ class Header extends React.Component{
 
                       </button>
 
-                      <div className="d-none d-md-block">
+                      <div className="menu-fullscreen d-none d-md-block">
                         <MenuFullScreen/>
 
                       </div>

@@ -24,7 +24,7 @@ class Contact extends React.Component {
             <section id="section-contact" className="section-contact">
             <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12}>
                     <h2 className="section-title-primary text-underline"> Contact  </h2>
                     <div className="form-wrapper">
                         <FormContact/>

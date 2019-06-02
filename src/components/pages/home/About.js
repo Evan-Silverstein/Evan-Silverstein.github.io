@@ -18,7 +18,7 @@ class About extends React.Component {
             <div className="section-body">
             <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12}>
                         <div className="section-content">
                             <h2 className="section-title-primary text-underline"> About  </h2>
 

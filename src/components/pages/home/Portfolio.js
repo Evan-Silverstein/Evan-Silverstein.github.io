@@ -14,7 +14,7 @@ class Portfolio extends React.Component {
             <section id="section-portfolio" className="section-portfolio">
             <Container>
                 <Row>
-                    <Col>
+                    <Col xs={12}>
                     <h2 className="section-title-primary text-underline"> Projects  </h2>
                     <div className="skills">
                         <Container>

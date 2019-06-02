@@ -64,10 +64,15 @@ class MyModal extends React.Component {
       this.setByProps = false;
       var modalSizeClass = this.state.fullWindow ? 'modal-full-window' : '';
       var modalId = this.props.modalId == undefined ? 'modal' : this.props.modalId;
+      console.log(this.props.title)
       return (
           <Modal id={modalId} className={modalSizeClass} show={this.state.show} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title> {this.props.title} </Modal.Title>
+              <Modal.Title> 
+                <div>
+                {this.props.modalTitle} 
+                </div>
+              </Modal.Title>
             </Modal.Header>
             <Modal.Body>
               {this.props.children}

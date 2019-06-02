@@ -10,7 +10,7 @@ function getSrcModulePath(path){
 //     return url
 // }
 
-function getUploadsDir(path = ''){
+function getUploadsDir(path){
     absPath = src + '/uploads/' + path
     return absPath; 
 }

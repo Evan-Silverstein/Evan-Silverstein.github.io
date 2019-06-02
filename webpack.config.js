@@ -11,7 +11,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        options: { 
+          presets: ["@babel/env"],
+          plugins: ["@babel/plugin-transform-object-assign"]
+        }
       },
       {
         test: /\.scss$/,
@@ -48,6 +51,7 @@ module.exports = {
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
     historyApiFallback: true,
+    disableHostCheck: true,
     //hot: true
     },
 //     plugins: [

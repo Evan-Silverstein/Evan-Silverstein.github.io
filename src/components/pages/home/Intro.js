@@ -29,7 +29,7 @@ class Intro extends React.Component {
                 <div className="overlay-content">
                     <Container>
                         <Row>
-                            <Col>
+                            <Col xs={12}>
                             <div className='hero'>
                                 <div className="stamp">
                                     <h2 className="hero-text"> Evan Silverstein </h2>

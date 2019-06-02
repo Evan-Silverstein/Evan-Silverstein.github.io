@@ -13,8 +13,8 @@ function Footer(props) {
     <section className="section-footer">
       <Container>
         <Row>
-          <Col>
-            <SocialMediaComponent socialMediaItems={socialMediaItems}/>
+        <Col xs={12}>
+          <SocialMediaComponent socialMediaItems={socialMediaItems}/>
             <p> Evan Silverstein </p>
           </Col>
         </Row>
