@@ -33,7 +33,7 @@ class Intro extends React.Component {
                             <div className='hero'>
                                 <div className="stamp">
                                     <h2 className="hero-text"> Evan Silverstein </h2>
-                                    <p className="hero-text-sub"> fullstack devevloper </p>
+                                    <p className="hero-text-sub"> fullstack developer </p>
 
                                     <NavLink className="button-border" smooth to='/#section-about'>Learn More</NavLink>
                                 </div>
