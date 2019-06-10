@@ -3,9 +3,9 @@ import React, { Component} from "react";
 import styles from 'Src/assets/sass/card.scss';
 const CardComponent = (props)=>{
     var card = props.card;
+    var clickHandler = props.clickHandler;
     // var backgroundImage = "url(" + card.imageUrl + ")";
     return(
-
         <div className='my-card-full-image'>
             <div className="card-image-container">
                 <a target="_blank" href={card.link}>

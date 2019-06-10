@@ -10,14 +10,14 @@ class MyModal extends React.Component {
     constructor(props, context) {
       super(props, context);
   
-      this.handleShow = this.handleShow.bind(this);
+      //this.handleShow = this.handleShow.bind(this);
       this.handleClose = this.handleClose.bind(this);
       // var isDisplayed = this.props.isDisplayed
       // var defaultDisplay = false;
       // var isDisplayed = isDisplayed == null ? defaultDisplay : isDisplayed;
       
       this.state = {
-        show: false,
+        show: this.props.show,
         fullWindow: this.props.fullWindow
 
       };
@@ -51,6 +51,7 @@ class MyModal extends React.Component {
     // }
     handleClose() {
       //this.props.show = false;
+      console.log('test');
       this.setState({ show: false });
     }
   
@@ -64,9 +65,10 @@ class MyModal extends React.Component {
       this.setByProps = false;
       var modalSizeClass = this.state.fullWindow ? 'modal-full-window' : '';
       var modalId = this.props.modalId == undefined ? 'modal' : this.props.modalId;
-      console.log(this.props.title)
+      var closeHandler = this.props.closeHandler == null ? this.handleClose: this.props.closeHandler;
+      //console.log(this.props.title)
       return (
-          <Modal id={modalId} className={modalSizeClass} show={this.state.show} onHide={this.handleClose}>
+          <Modal id={modalId} className={modalSizeClass} show={this.state.show} onHide={closeHandler}>
             <Modal.Header closeButton>
               <Modal.Title> 
                 <div>
@@ -79,7 +81,7 @@ class MyModal extends React.Component {
 
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>
+              <Button variant="secondary" onClick={closeHandler}>
                 Close
               </Button>
               {/* <Button variant="primary" onClick={this.handleClose}>

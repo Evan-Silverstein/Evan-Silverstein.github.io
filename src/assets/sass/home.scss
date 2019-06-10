@@ -165,3 +165,76 @@
         }
     }
 }
+
+#project-modal{
+    .modal-footer{
+        padding: 10px;
+        *{
+            display: none;
+        }
+
+    }
+    .modal-body{
+        padding-bottom: 20px;
+    }
+    .modal-header{
+        a{
+            // text-decoration: underline;
+        }
+    }
+    .carousel{
+        background-color: black;
+        .carousel-inner{
+            padding: 50px;
+        }
+        .carousel-item{
+            // background-color: black;
+            .img-wrapper{
+                padding: 10px;
+                max-width: 500px;
+                margin: 0px auto;
+            }
+        }
+    }
+
+    .item-details{
+        padding: 1rem;
+        .description{
+            margin-bottom: 10px;
+        }
+        .data-section{
+            display: flex;
+            
+            .data-title{
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        }
+  
+        .tags-list{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                white-space: nowrap;
+                // font-weight: bold;
+                //font-size: 12px;
+                margin-right: 5px;
+                &::after{
+                    content: ',';
+                }
+
+           
+            }
+            li:last-child:after
+            {
+              content: '';
+            }
+            // margin: 20px;
+            // list-style: square;
+            // li{
+               
+            // }
+        }
+    }
+
+}

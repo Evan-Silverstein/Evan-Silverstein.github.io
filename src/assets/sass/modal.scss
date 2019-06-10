@@ -1,11 +1,12 @@
 .modal-full-window{
     padding: 17px;
-
+    
     .modal-dialog{
         max-width: 900px;
         margin: auto;
         height: 100%;
         //margin: 0px;
+
         
         .modal-content{
             height: 100%;
@@ -31,6 +32,8 @@
     }
 
     .modal-body{
+        overflow: auto;
+
         padding: 0px;
         padding-bottom: 20px;
     }

@@ -11,8 +11,14 @@ import styles from "Src/assets/sass/home.scss";
 
 class Home extends React.Component {
     // constructor(props){
-    //     super()
+    //     super(props)
+    //     this.state={
+    //         showModal: false
+    //     }
 
+    // }
+    // componentDidMount(){
+    //     console.log('called');
     // }
     render(){
         var props = this.props;
@@ -35,7 +41,7 @@ class Home extends React.Component {
                     <About skills={skills} self={selfInfo}/>
                     <Portfolio projects={projects}/>
                     <Contact emailHandler={emailHandler}/>
-                    <MyModal modalTitle={modalHeader} modalId='resume-modal' title='' fullWindow={true} show={displayResume}>
+                    <MyModal modalTitle={modalHeader} modalId='resume-modal' fullWindow={true} show={displayResume}>
                         <Resume resumeLink={resumeLink}/>
                     </MyModal>
     
