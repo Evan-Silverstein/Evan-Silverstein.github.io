@@ -30,7 +30,7 @@ class DataService{
     initializeSelfCard(){
         var title = 'Evan Silverstein';
         var imgUrl = getUploadsDir('images/evan-headshot.jpg');
-        var description = "I'm a Web Developer at Simplistics (Toronto, ON). I love building applications based on software design patterns, especially dependency injection";
+        var description = "I'm a Web Developer at Simplistics (Toronto, ON). I love building applications based on software design patterns, especially dependency injection.";
         var card = new Card(title, description, imgUrl);
         return card;
 
