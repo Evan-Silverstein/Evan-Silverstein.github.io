@@ -7,8 +7,8 @@ import Footer from "Components/shared/Footer"
 import styles from "Src/assets/sass/app.scss"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel, faCheckSquare, faBars} from '@fortawesome/free-solid-svg-icons'
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { faStroopwafel, faCheckSquare, faBars, faFile} from '@fortawesome/free-solid-svg-icons'
+import {faGithub, faLinkedin, faMedium} from '@fortawesome/free-brands-svg-icons'
 
 import DataService from "Src/services/DataService";
 
@@ -17,12 +17,12 @@ import DataService from "Src/services/DataService";
 class App extends React.Component {
     
     render(){
-        library.add(faCheckSquare, faGithub, faLinkedin, faBars);
+        library.add(faCheckSquare, faGithub, faLinkedin, faBars, faMedium, faFile);
         var service = new DataService();
         return(
           <div className="app">
             <header>
-              <Header />
+              <Header service={service}/>
             </header>
             <div className="main">
                 <RouterOutlet service={service}/>      

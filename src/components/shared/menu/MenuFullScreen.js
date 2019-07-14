@@ -5,26 +5,28 @@ import styles from "Src/assets/sass/header.scss";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SocialMediaComponent from 'Src/components/shared/SocialMediaComponent';
 
 class MenuFullScreen extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.socialMediaItems = this.props.socialMediaCards == null ? [] : this.props.socialMediaItems;
+        console.log(this.socialMediaItems)
+    }
     MenuItemClickHandler(e){
         var val = e.target.textContent;
-        // console.log(val);
         var handler = this.props.menuClickHandler;
         if(handler != undefined){
             this.props.menuClickHandler(val)
         }
     }
+    // getSocialMediaIcons(){
+    //     var items = this.socialMediaItems;
+    //     if(items.count > 0)
+    // }
     render(){
-        return (
-            // <div className="header-wrapper">
-            // <div className="overlay-container">
-            // <div className="overlay-content">
-            // <Container>
-            // <Row>
-            // <Col>
-            //   <div className="header-content">
-        
+        return (        
                 <nav>
                   <ul className="nav-list">
                     <li className="nav-item"><NavLink onClick={this.MenuItemClickHandler.bind(this)} smooth to='/#section-about'>About</NavLink></li>
@@ -33,7 +35,8 @@ class MenuFullScreen extends React.Component{
         
                     {/* <li  className="nav-item"> <a href={getUploadsDir('documents/resume.docx')}>Resume</a></li> */}
                     <li  className="nav-item"> <NavLink onClick={this.MenuItemClickHandler.bind(this)} smooth to='/#section-contact'>Contact</NavLink></li>
-        
+                    {/* <li> <SocialMediaComponent socialMediaItems={this.socialMediaItems}/> </li> */}
+
                     {/* <li><Link to='/schedule'>Schedule</Link></li> */}
                   </ul>
                 </nav>

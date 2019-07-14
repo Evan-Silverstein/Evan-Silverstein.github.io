@@ -51,7 +51,7 @@ class MyModal extends React.Component {
     // }
     handleClose() {
       //this.props.show = false;
-      console.log('test');
+      // console.log('test');
       this.setState({ show: false });
     }
   

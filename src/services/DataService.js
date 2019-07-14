@@ -130,10 +130,16 @@ class DataService{
         var description = "github";
         var imgUrl = 'github';
         var link = 'https://github.com/Titaniumstein';
-
         var card2 = new Card(title, description, imgUrl, link);
 
-        cards.push(card1, card2);
+        var title = 'Medium';
+        var description = "medium";
+        var imgUrl = 'medium';
+        var link = 'https://medium.com/@evandsilverstein';
+        var card3 = new Card(title, description, imgUrl, link);
+
+
+        cards.push(card1, card2, card3);
         return cards;
 
     }

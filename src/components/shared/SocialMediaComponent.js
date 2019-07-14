@@ -10,9 +10,8 @@ const SocialMediaComponent = (props)=>{
 
             {items.map((card, index)=>{
                 return(
-                    <a target="_blank" key={index} href={card.link}>
-
-                        <li className="social-media-item">
+                    <a className="social-media-item" target="_blank" key={index} href={card.link}>
+                        <li className="">
                                 <FontAwesomeIcon icon={["fab", card.imageUrl]} />
                         </li>
                     </a>

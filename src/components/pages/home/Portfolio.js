@@ -37,7 +37,7 @@ class Portfolio extends React.Component {
         })
     }
     displayModal(project){
-        console.log(project)
+        // console.log(project)
         if(project == null){ return }
         var modalTitle = <a target="_blank" href={project.link}> {project.title} </a>;
         return (
