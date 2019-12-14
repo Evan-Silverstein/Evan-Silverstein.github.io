@@ -1,6 +1,6 @@
 import Card from 'Src/models/Card';
+import CardDisplayType from 'Src/models/CardDisplayType';
 import axios from 'axios';
-
 class DataService{
     constructor(){
         this.projectCards = this.initializeProjectCards();
@@ -29,7 +29,7 @@ class DataService{
 
     initializeSelfCard(){
         var title = 'Evan Silverstein';
-        var imgUrl = getUploadsDir('images/evan-headshot.jpg');
+        var imgUrl = getUploadsDir('images/evan-headshot.png');
         var description = "I'm a Software Developer and I love building applications based on software design patterns, especially dependency injection.";
         var card = new Card(title, description, imgUrl);
         return card;
@@ -41,7 +41,7 @@ class DataService{
         var title = 'MacroManager';
         var description = "A package manager for VBA";
         var descriptionLong = "MacroManager is a tool that manages scripts written in Visual Basic for Applications (VBA). The desktop application allows users to easily create and distribute packages containing VBA macros to facilitate code reusability."
-        var imgUrl = getUploadsDir('images/desktop-app-icon.png');
+        var imgUrl = getUploadsDir('images/macro-manager-images/MacroManager Logo Stacked.png');
         var link = 'http://macromanager.github.io';
         var attributes = [
             'The frontend was developed with WPF using a unidirectional data flow architecture and a state management pattern',
@@ -62,7 +62,7 @@ class DataService{
             getUploadsDir('images/macro-manager-images/macro_macroEditor_code.png'),
 
         ]
-        var card1 = new Card(title, description, imgUrl, link);
+        var card1 = new Card(title, description, imgUrl, link, CardDisplayType.ImageGrow);
         card1.descriptionLong = descriptionLong;
         card1.attributes = attributes;
         card1.tags = tags;
@@ -72,14 +72,21 @@ class DataService{
         var title = 'Stacker';
         var description = "A game of great skill";
         var descriptionLong = "Stacker is the product of a hackathon. It was inspired by an arcade game of the same name. Follow the link to play!"
-        var imgUrl = getUploadsDir('images/stacker.png');
+        var imgUrl = getUploadsDir('images/stacker-images/stacker.png');
         var link = 'https://evan-silverstein-stacker.github.io';
         var tags = [
             'React',            
         ]
+
+        var gallery = [
+            getUploadsDir('images/stacker-images/stacker-game-1.png'),
+            getUploadsDir('images/stacker-images/stacker-game-2.png'),
+            getUploadsDir('images/stacker-images/stacker-game-3.png')
+        ]
         var card2 = new Card(title, description, imgUrl, link);
         card2.descriptionLong = descriptionLong;
         card2.tags = tags;
+        card2.gallery = gallery;
         
 
         var title = 'Hangman';

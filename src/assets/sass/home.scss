@@ -88,7 +88,9 @@
         .left-wrapper{
             text-align: center;
             .img-wrapper{
-                background-color: $grey;
+                overflow: hidden;
+                border-radius: 5%;
+                // background-color: $grey;
                 // margin: 0px auto;
                 img{
                     //max-width: 400px;

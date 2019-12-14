@@ -1,6 +1,7 @@
+import CardDisplayType from './CardDisplayType';
 class Card{
 
-    constructor(title, description, imageUrl = '', link = ''){
+    constructor(title, description, imageUrl = '', link = '', displayType = CardDisplayType.ImageFullLength){
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
@@ -9,6 +10,7 @@ class Card{
         this.attributes = [];
         this.tags = [];
         this.gallery = [];
+        this.displayType = displayType;
     }
 }
 export default Card;
