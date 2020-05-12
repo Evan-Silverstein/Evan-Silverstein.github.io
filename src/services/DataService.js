@@ -30,7 +30,7 @@ class DataService{
     initializeSelfCard(){
         var title = 'Evan Silverstein';
         var imgUrl = getUploadsDir('images/evan-headshot.png');
-        var description = "I'm a Software Developer and I love building applications based on software design patterns, especially dependency injection.";
+        var description = "I'm a Software Developer and I love building applications based on software design patterns.";
         var card = new Card(title, description, imgUrl);
         return card;
 
@@ -56,11 +56,17 @@ class DataService{
 
             
         ]
-        var gallery = [
-            getUploadsDir('images/macro-manager-images/macro_packages.png'),
-            getUploadsDir('images/macro-manager-images/macro_macroEditor_properties.png'),
-            getUploadsDir('images/macro-manager-images/macro_macroEditor_code.png'),
 
+        var imagesPath = getUploadsDir('images/macro-manager-images');
+
+        var gallery = [
+            imagesPath + '/packages.png',
+            imagesPath + '/dashboard.png',
+            imagesPath + '/pkgEditor.png',
+            imagesPath + '/macroEditorSource.png',
+            imagesPath + '/macroEditorProps.png',
+            imagesPath + '/installPackage.png',
+            imagesPath + '/packagesLoggedOut.png',    
         ]
         var card1 = new Card(title, description, imgUrl, link, CardDisplayType.ImageGrow);
         card1.descriptionLong = descriptionLong;
