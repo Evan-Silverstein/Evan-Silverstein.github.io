@@ -7,7 +7,7 @@ class DataService{
         this.skillCards = this.initializeSkillCards();
         this.selfCard = this.initializeSelfCard();
         this.socialMediaCards = this.initializeSocialMediaCards();
-        this.resumeUrl = getUploadsDir('documents/resume.pdf');
+        this.resumeUrl = getUploadsDir('documents/Resume_EvanSilverstein.pdf');
 
     }
 
