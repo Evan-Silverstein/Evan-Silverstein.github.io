@@ -142,6 +142,8 @@
 
 %my-card-base{
     height: 300px;
+    box-shadow: $boxShadow;
+    background-color: $blue;
     .card-image-container{
         @extend .overlay-container;
         &, a, .img-wrapper{
@@ -153,7 +155,7 @@
             @extend .overlay-content;
             transition: opacity 0.3s;
             //background-color: $blue;
-            opacity: 0.6;
+            opacity: 0.2;
         }
         &::after{
             @extend %overlay-effect;
@@ -212,8 +214,6 @@
 
         
     }
-    box-shadow: $boxShadow;
-    background-color: $white;
     &:hover{
         .card-image-container{
             a{
