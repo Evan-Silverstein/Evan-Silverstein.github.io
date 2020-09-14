@@ -13,6 +13,7 @@
         height: 100vh;
         padding: 0px;
         background-color: $white;
+        overflow: hidden;
        
         .overlay-container{
             display: flex;
@@ -28,6 +29,8 @@
                 background: url('/src/uploads/images/hero-image.jpg');        
                 background-size: cover;
                 background-repeat: no-repeat;
+                background-position: 40% 10%;
+                transform: scale(1);
                 // height: 100vh;
 
             }
